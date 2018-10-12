@@ -19,19 +19,6 @@ public class Fibonacci {
 	BigInteger[] list2;
 	int index2;
 	
-	//used during 3rd attempt 
-	BigInteger[] list3;
-	int index3;
-	int size3;
-
-	static final double sqrtFive = Math.sqrt(5); 
-	static final double oneOverSqrtFive = 1/sqrtFive;
-	static final double powBasePlus  = (1 + sqrtFive)/2;
-	static final double powBaseMinus  = (1 - sqrtFive)/2;
-	static final BigDecimal bigDecimalOneOverSqrtFive = new BigDecimal(oneOverSqrtFive);
-	static final BigDecimal bigDecimalPowBasePlus = new BigDecimal(powBasePlus);
-	static final BigDecimal bigDecimalPowBaseMinus = new BigDecimal(powBaseMinus);
-	
 	//my own 1st attempt without help, just knowing that fibonacci means
 	//0,1, 2 (0+1), 3 (2 + 1), etc
 	void calcFibonacci(int size) {
@@ -107,7 +94,20 @@ public class Fibonacci {
 	}
 
 	
-	/*
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//used during 3rd attempt
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	static final double sqrtFive = Math.sqrt(5); 
+	static final double oneOverSqrtFive = 1/sqrtFive;
+	static final double powBasePlus  = (1 + sqrtFive)/2;
+	static final double powBaseMinus  = (1 - sqrtFive)/2;
+	static final BigDecimal bigDecimalOneOverSqrtFive = new BigDecimal(oneOverSqrtFive);
+	static final BigDecimal bigDecimalPowBasePlus = new BigDecimal(powBasePlus);
+	static final BigDecimal bigDecimalPowBaseMinus = new BigDecimal(powBaseMinus);
+	
+	/***********************************************************************************************************
+	 * third attempt
+	 ***********************************************************************************************************
 	 * this was based off of
 	 * https://dzone.com/articles/what-fibonacci-taught-me-about
 	 * (Javascript)
@@ -122,7 +122,7 @@ public class Fibonacci {
 	 *}
 	 * 
 	 * 
-	 */
+	 ***********************************************************************************************************/
 	BigInteger fibMath(int i) {
 		return fibMath(BigInteger.valueOf(i));
 	}
@@ -159,7 +159,10 @@ public class Fibonacci {
 		 * After this point(below), got more help. Using:
 		 * F(n) = F(n-1) + F(n-2)
 		 * 
-		 * All methods related to below are part of the above explanation.
+		 * but that didn't go well.
+		 * 
+		 * See 'third attempt' above.
+		 * 
 		 ********************************************************************/
 		 int n = 0;
 		System.out.print("[");
